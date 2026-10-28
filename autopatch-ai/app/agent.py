@@ -5,14 +5,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Initialize OpenAI SDK pointed to Nebius Token Factory
+# For free testing with a Groq API Key:
 client = OpenAI(
    base_url="https://api.groq.com/openai/v1",
     api_key=os.getenv("GROQ_API_KEY"),
 )
 
-# Open-source NVIDIA Model hosted on Nebius
-MODEL_NAME = os.getenv("NEBIUS_MODEL_NAME", "nebius/nvidia/Nemotron-3-Super-120b-a12b")
+# Use a valid Groq model identifier (e.g., Llama 3.3 70B or Llama 3.1 8B)
+MODEL_NAME = os.getenv("MODEL_NAME", "llama-3.3-70b-versatile")
 
 
 def analyze_code_diff(filename: str, diff_content: str) -> dict:
