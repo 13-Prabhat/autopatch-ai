@@ -7,8 +7,8 @@ load_dotenv()
 
 # Initialize OpenAI SDK pointed to Nebius Token Factory
 client = OpenAI(
-    base_url="https://api.tokenfactory.nebius.com/v1/",
-    api_key=os.getenv("NEBIUS_API_KEY"),
+   base_url="https://api.groq.com/openai/v1",
+    api_key=os.getenv("GROQ_API_KEY"),
 )
 
 # Open-source NVIDIA Model hosted on Nebius
